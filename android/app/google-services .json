@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "444093606773",
+    "project_id": "fir-new-355ba",
+    "storage_bucket": "fir-new-355ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444093606773:android:d4012b89f1283264a8c13c",
+        "android_client_info": {
+          "package_name": "com.example.posthub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARHB0j5CR6X5UPa6lhQQdWIuRAJ3An0q4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
