@@ -47,11 +47,11 @@ class NotificationService {
     //var initializationSettingsIOS = const IOSInitializationSettings();
     var initializationSettings = InitializationSettings(
       android: initializationSettingsAndroid,
-     // iOS: initializationSettingsIOS,
+      // iOS: initializationSettingsIOS,
     );
     flutterLocalNotificationsPlugin.initialize(
       initializationSettings,
-     // onSelectNotification: onSelectNotification,
+      // onSelectNotification: onSelectNotification,
     );
 
     FirebaseMessaging.onMessage.listen((RemoteMessage message) async {
