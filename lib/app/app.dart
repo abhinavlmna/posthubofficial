@@ -1,5 +1,5 @@
-
 import 'package:posthub/Ui/Addnew/addnew_view.dart';
+import 'package:posthub/Ui/Edit/edit_view.dart';
 import 'package:posthub/Ui/Splash/splash_view.dart';
 import 'package:posthub/Ui/dashboard/dashboard.dart';
 import 'package:posthub/Ui/details/details_view.dart';
@@ -21,15 +21,13 @@ import 'package:stacked_services/stacked_services.dart';
     MaterialRoute(page: AddnewView),
     MaterialRoute(page: GoogleView),
     MaterialRoute(page: MetaView),
-
+    MaterialRoute(page: EditView),
   ],
   dependencies: [
     //LazySingleton(classType: ApiService),
     LazySingleton(classType: NavigationService),
     LazySingleton(classType: DialogService),
     LazySingleton(classType: BottomSheetService),
-
-
   ],
 )
 class AppSetup {}

@@ -31,8 +31,8 @@ class AppbarLeadingIconbutton extends StatelessWidget {
       child: Padding(
         padding: margin ?? EdgeInsets.zero,
         child: CustomIconButton(
-          height: 40.adaptSize,
-          width: 40.adaptSize,
+          height: 20.adaptSize,
+          width: 25.adaptSize,
           child: CustomImageView(
             imagePath: ImageConstant.imgIcon2,
           ),

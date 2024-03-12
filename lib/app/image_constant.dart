@@ -25,6 +25,8 @@ class ImageConstant {
 
   static String imgPost = '$imagePath/posthublogo.png';
 
+  static String imgUpload = '$imagePath/uploadpick.png';
+
   static String imgIcon = '$imagePath/backarrow.png';
 
   static String imgIcon2 = '$imagePath/img_arrow_down.png';

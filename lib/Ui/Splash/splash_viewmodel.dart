@@ -11,7 +11,7 @@ class SplashViewModel extends BaseViewModel {
   // final _apiService = locator<ApiService>();
   // final _notificationService = locator<NotificationService>();
 
-  void startTimer() async {
+    void startTimer() async {
     // AppUser? user = await _userService.loadCredential();
     // bool hasUser = user?.hasUser ?? false;
 

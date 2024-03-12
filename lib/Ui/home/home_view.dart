@@ -385,7 +385,7 @@ class HomeView extends StatelessWidget {
                                                                             TextDecoration.underline)),
                                                           )
                                                         ])),
-                                              )
+                                              ),
                                             ],
                                           ),
                                         ),

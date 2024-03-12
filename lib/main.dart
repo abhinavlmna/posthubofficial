@@ -32,9 +32,9 @@ class MyApp extends StatelessWidget {
       builder: (BuildContext context, Orientation orientation,
           DeviceType deviceType) {
         return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          onGenerateRoute: StackedRouter().onGenerateRoute,
-          navigatorKey: StackedService.navigatorKey,
+            debugShowCheckedModeBanner: false,
+            onGenerateRoute: StackedRouter().onGenerateRoute,
+            navigatorKey: StackedService.navigatorKey,
         );
       },
     );

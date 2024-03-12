@@ -63,7 +63,7 @@ class AddnewView extends StatelessWidget {
                     child: Column(
                       children: [
                         TakePic(),
-                        SizedBox(height: 45.v),
+                        SizedBox(height: 35.v),
                         Align(
                           alignment: Alignment.centerLeft,
                           child: Padding(
@@ -72,15 +72,17 @@ class AddnewView extends StatelessWidget {
                               children: [
                                 Text(
                                   "Run Campaign in",
-                                  style: theme.textTheme.titleSmall,
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold),
                                 ),
                               ],
                             ),
                           ),
                         ),
-                        SizedBox(height: 5.v),
+                        SizedBox(height: 10.v),
                         Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 16.h),
+                            padding: EdgeInsets.symmetric(horizontal: 20.h),
                             child: Row(
                               children: [
                                 InkWell(
@@ -104,7 +106,7 @@ class AddnewView extends StatelessWidget {
                                   ),
                                 ),
                                 SizedBox(
-                                  width: 5.v,
+                                  width: 15.v,
                                 ),
                                 InkWell(
                                   onTap: () {
@@ -129,7 +131,7 @@ class AddnewView extends StatelessWidget {
                                 )
                               ],
                             )),
-                        SizedBox(height: 17.v),
+                        SizedBox(height: 20.v),
                         Padding(
                           padding: EdgeInsets.symmetric(horizontal: 16.h),
                           child: CustomTextFormField(
@@ -143,7 +145,7 @@ class AddnewView extends StatelessWidget {
                             hintText: "Add Caption",
                           ),
                         ),
-                        SizedBox(height: 16.v),
+                        SizedBox(height: 20.v),
                         Padding(
                           padding: EdgeInsets.symmetric(horizontal: 16.h),
                           child: CustomTextFormField(
@@ -170,7 +172,7 @@ class AddnewView extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(height: 5.v),
+                        SizedBox(height: 10.v),
                         Padding(
                           padding: EdgeInsets.symmetric(horizontal: 16.h),
                           child: TextFormField(
@@ -199,7 +201,7 @@ class AddnewView extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(height: 9.v),
+                        SizedBox(height: 20.v),
                         Align(
                           alignment: Alignment.centerLeft,
                           child: Padding(
@@ -312,7 +314,7 @@ class AddnewView extends StatelessWidget {
                             ],
                           ),
                         ),
-                        SizedBox(height: 17.v),
+                        SizedBox(height: 20.v),
                         Padding(
                           padding: EdgeInsets.symmetric(horizontal: 16.h),
                           child: Row(
@@ -374,7 +376,7 @@ class AddnewView extends StatelessWidget {
                             },
                           ),
                         ),
-                        SizedBox(height: 30.v),
+                        SizedBox(height: 40.v),
                         Align(
                           alignment: Alignment.centerLeft,
                           child: Padding(
@@ -386,7 +388,7 @@ class AddnewView extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          height: 32.v,
+                          height: 42.v,
                           width: 330.h,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.start,
@@ -401,7 +403,7 @@ class AddnewView extends StatelessWidget {
                               ),
                               Text("${model.gender[0]}"),
                               SizedBox(
-                                width: 5.v,
+                                width: 10.v,
                               ),
                               Radio(
                                 activeColor: Theme.of(context).primaryColor,
@@ -413,7 +415,7 @@ class AddnewView extends StatelessWidget {
                               ),
                               Text("${model.gender[1]}"),
                               SizedBox(
-                                width: 5.v,
+                                width: 10.v,
                               ),
                               Radio(
                                 activeColor: Theme.of(context).primaryColor,
@@ -427,7 +429,7 @@ class AddnewView extends StatelessWidget {
                             ],
                           ),
                         ),
-                        SizedBox(height: 8.v),
+                        SizedBox(height: 20.v),
                         Column(
                           children: [
                             Padding(
@@ -439,7 +441,7 @@ class AddnewView extends StatelessWidget {
                                     "Keywords",
                                     style: theme.textTheme.titleSmall,
                                   ),
-                                  SizedBox(height: 5.v),
+                                  SizedBox(height: 15.v),
                                   Container(
                                       child: CustomTextFormField(
                                     validator: (value) {
@@ -457,22 +459,28 @@ class AddnewView extends StatelessWidget {
                                     "Add a comma (,) to separate keyword ",
                                     style: theme.textTheme.labelMedium,
                                   ),
-                                  SizedBox(height: 26.v),
+                                  SizedBox(height: 36.v),
                                   CustomElevatedButton(
-                                    text: "Run Campaign",
+                                    buttonStyle: ButtonStyle(
+                                        backgroundColor:
+                                            MaterialStateColor.resolveWith(
+                                                (states) => Colors.black)),
+                                    buttonTextStyle: TextStyle(
+                                        fontSize: 20, color: Colors.white),
+                                    text: "Start Campaign",
                                     onPressed: () {
                                       model.validateandpush();
                                     },
                                   ),
-                                  SizedBox(height: 26.v),
+                                  SizedBox(height: 46.v),
                                 ],
                               ),
                             ),
                           ],
                         ),
-                        SizedBox(
-                          height: 260.v,
-                        )
+                        // SizedBox(
+                        //   height: 260.v,
+                        // )
                       ],
                     ),
                   ),
@@ -544,10 +552,36 @@ class TakePic extends ViewModelWidget<AddnewViewModel> {
             ),
             alignment: Alignment.center,
           ),
+          Container(
+            child: CustomImageView(
+              imagePath: ImageConstant.imgUpload,
+              height: 28.adaptSize,
+              width: 28.adaptSize,
+              margin: EdgeInsets.only(bottom: 150.v),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 140, left: 40),
+            child: SizedBox(
+              width: 250.h,
+              child: Text('Choose a file or drag & drop it here',
+                  style: theme.textTheme.bodyMedium),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 110, left: 30),
+            child: SizedBox(
+              width: 250.h,
+              child: Text(
+                'JPEG, PNG, PDG, and MP4 formats, up to 50MB',
+                style: theme.textTheme.bodySmall,
+              ),
+            ),
+          ),
           CustomOutlinedButton(
             width: 119.h,
             text: "Browse Files",
-            margin: EdgeInsets.only(bottom: 108.v),
+            margin: EdgeInsets.only(bottom: 40.v),
             alignment: Alignment.bottomCenter,
             onPressed: () {
               getImage();
