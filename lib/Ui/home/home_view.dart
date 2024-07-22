@@ -1,4 +1,4 @@
-import 'package:carousel_slider/carousel_slider.dart';
+// import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -173,59 +173,59 @@ class HomeView extends StatelessWidget {
                                   ),
                                   Expanded(
                                     child: Container(
-                                      height: 200,
-                                      child: CarouselSlider.builder(
-                                          options: CarouselOptions(
-                                              aspectRatio: 16 / 16,
-                                              height: 200,
-                                              initialPage: 0,
-                                              autoPlay: true,
-                                              viewportFraction: 1.0,
-                                              enableInfiniteScroll: true,
-                                              scrollDirection: Axis.horizontal,
-                                              onPageChanged: (index, reason) {
-                                                sliderIndex = index;
-                                              }),
-                                          itemCount:
-                                              viewModel.postlist.length ?? 2,
-                                          itemBuilder:
-                                              (context, index, realIndex) {
-                                            return viewModel.postlist.length ==
-                                                    0
-                                                ? Container(
-                                                    height: 200,
-                                                    decoration: BoxDecoration(
-                                                        borderRadius:
-                                                            BorderRadius.all(
-                                                                Radius.circular(
-                                                                    20)),
-                                                        color: Colors.blueGrey),
-                                                    child: Center(
-                                                        child: SvgPicture.asset(
-                                                      "assets/images/img_group_2.svg",
-                                                      height: 51.v,
-                                                      width: 100.h,
-                                                      fit: BoxFit.fill,
-                                                    )),
-                                                  )
-                                                : Padding(
-                                                    padding:
-                                                        EdgeInsets.all(8.0),
-                                                    child: Container(
-                                                      height: 200,
-                                                      decoration: BoxDecoration(
-                                                          borderRadius:
-                                                              BorderRadius.all(
-                                                                  Radius
-                                                                      .circular(
-                                                                          20)),
-                                                          image: DecorationImage(
-                                                              image: NetworkImage(
-                                                                  "${viewModel.postlist[index].url}"))),
-                                                    ),
-                                                  );
-                                          }),
-                                    ),
+                                        height: 200, child: Text('nodata')
+                                        //  CarouselSlider.builder(
+                                        //     options: CarouselOptions(
+                                        //         aspectRatio: 16 / 16,
+                                        //         height: 200,
+                                        //         initialPage: 0,
+                                        //         autoPlay: true,
+                                        //         viewportFraction: 1.0,
+                                        //         enableInfiniteScroll: true,
+                                        //         scrollDirection: Axis.horizontal,
+                                        //         onPageChanged: (index, reason) {
+                                        //           sliderIndex = index;
+                                        //         }),
+                                        //     itemCount:
+                                        //         viewModel.postlist.length ?? 2,
+                                        //     itemBuilder:
+                                        //         (context, index, realIndex) {
+                                        //       return viewModel.postlist.length ==
+                                        //               0
+                                        //           ? Container(
+                                        //               height: 200,
+                                        //               decoration: BoxDecoration(
+                                        //                   borderRadius:
+                                        //                       BorderRadius.all(
+                                        //                           Radius.circular(
+                                        //                               20)),
+                                        //                   color: Colors.blueGrey),
+                                        //               child: Center(
+                                        //                   child: SvgPicture.asset(
+                                        //                 "assets/images/img_group_2.svg",
+                                        //                 height: 51.v,
+                                        //                 width: 100.h,
+                                        //                 fit: BoxFit.fill,
+                                        //               )),
+                                        //             )
+                                        //           : Padding(
+                                        //               padding:
+                                        //                   EdgeInsets.all(8.0),
+                                        //               child: Container(
+                                        //                 height: 200,
+                                        //                 decoration: BoxDecoration(
+                                        //                     borderRadius:
+                                        //                         BorderRadius.all(
+                                        //                             Radius
+                                        //                                 .circular(
+                                        //                                     20)),
+                                        //                     image: DecorationImage(
+                                        //                         image: NetworkImage(
+                                        //                             "${viewModel.postlist[index].url}"))),
+                                        //               ),
+                                        //             );
+                                        //     }),
+                                        ),
                                   ),
                                 ],
                               ),

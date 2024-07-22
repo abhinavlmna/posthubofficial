@@ -1,4 +1,4 @@
-import 'package:carousel_slider/carousel_slider.dart';
+// import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -28,7 +28,6 @@ class MetaView extends StatelessWidget {
       },
       onDispose: (model) {},
       builder: (context, viewModel, child) {
-
         return SafeArea(
             child: Scaffold(
                 body: Container(
@@ -226,7 +225,8 @@ class MetaView extends StatelessWidget {
                                       (BuildContext context, int index) {
                                     return GestureDetector(
                                       onTap: () {
-                                        viewModel.Detailspage(viewModel.postlist[index]);
+                                        viewModel.Detailspage(
+                                            viewModel.postlist[index]);
                                       },
                                       child: Padding(
                                         padding:
@@ -237,18 +237,19 @@ class MetaView extends StatelessWidget {
                                             children: [
                                               Container(
                                                   height: 336,
-                                                  width: MediaQuery.of(context).size.width-20,
+                                                  width: MediaQuery.of(context)
+                                                          .size
+                                                          .width -
+                                                      20,
                                                   decoration: BoxDecoration(
-                                                      borderRadius: BorderRadius.circular(20),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              20),
                                                       image: DecorationImage(
                                                         image: NetworkImage(
                                                             "${viewModel.postlist[index].url}"),
-
-
                                                         fit: BoxFit.fill,
-                                                      )
-                                                  )
-                                              ),
+                                                      ))),
                                               SizedBox(height: 8),
                                               Container(
                                                 height: 20,
@@ -271,8 +272,14 @@ class MetaView extends StatelessWidget {
                                                                       bottom:
                                                                           2),
                                                               decoration: BoxDecoration(
-                                                                  color: viewModel.postlist[index].rejected?appTheme
-                                                                      .redA700:appTheme.blueGray10001,
+                                                                  color: viewModel
+                                                                          .postlist[
+                                                                              index]
+                                                                          .rejected
+                                                                      ? appTheme
+                                                                          .redA700
+                                                                      : appTheme
+                                                                          .blueGray10001,
                                                                   borderRadius:
                                                                       BorderRadius
                                                                           .circular(
@@ -280,55 +287,51 @@ class MetaView extends StatelessWidget {
                                                           Padding(
                                                               padding: EdgeInsets
                                                                   .only(
-                                                                      left:
-                                                                          8),
-                                                              child:
-                                                              viewModel.postlist[index].rejected?RichText(
-                                                                  text: TextSpan(
-                                                                      children: [
-                                                                        TextSpan(
-                                                                            text:
-                                                                            "Admin Rejected the post ",
-                                                                            style:
-                                                                            CustomTextStyles.labelLargeff161616),
-                                                                        TextSpan(
-                                                                            text:
-                                                                            "Why?",
-                                                                            style:
-                                                                            CustomTextStyles.labelLargeff161616Bold.copyWith(decoration: TextDecoration.underline))
-                                                                      ]),
-                                                                  textAlign:
-                                                                  TextAlign
-                                                                      .left):RichText(
-                                                                  text: TextSpan(
-                                                                      children: [
-                                                                        TextSpan(
-                                                                            text:
-                                                                            "Admin Approved the post ",
-                                                                            style:
-                                                                            CustomTextStyles.labelLargeff161616),
-                                                                        TextSpan(
-                                                                            text:
-                                                                            "Tap to view",
-                                                                            style:
-                                                                            CustomTextStyles.labelLargeff161616Bold.copyWith(decoration: TextDecoration.underline))
-                                                                      ]),
-                                                                  textAlign:
-                                                                  TextAlign
-                                                                      .left)
-                                                          ),
+                                                                      left: 8),
+                                                              child: viewModel
+                                                                      .postlist[
+                                                                          index]
+                                                                      .rejected
+                                                                  ? RichText(
+                                                                      text: TextSpan(
+                                                                          children: [
+                                                                            TextSpan(
+                                                                                text: "Admin Rejected the post ",
+                                                                                style: CustomTextStyles.labelLargeff161616),
+                                                                            TextSpan(
+                                                                                text: "Why?",
+                                                                                style: CustomTextStyles.labelLargeff161616Bold.copyWith(decoration: TextDecoration.underline))
+                                                                          ]),
+                                                                      textAlign:
+                                                                          TextAlign
+                                                                              .left)
+                                                                  : RichText(
+                                                                      text: TextSpan(
+                                                                          children: [
+                                                                            TextSpan(
+                                                                                text: "Admin Approved the post ",
+                                                                                style: CustomTextStyles.labelLargeff161616),
+                                                                            TextSpan(
+                                                                                text: "Tap to view",
+                                                                                style: CustomTextStyles.labelLargeff161616Bold.copyWith(decoration: TextDecoration.underline))
+                                                                          ]),
+                                                                      textAlign:
+                                                                          TextAlign
+                                                                              .left)),
                                                           Spacer(),
                                                           InkWell(
-                                                            onTap: (){
-                                                              viewModel.deleteItem("${viewModel.postlist[index].id}",index);
+                                                            onTap: () {
+                                                              viewModel.deleteItem(
+                                                                  "${viewModel.postlist[index].id}",
+                                                                  index);
                                                             },
-                                                            child: Text("Remove",
+                                                            child: Text(
+                                                                "Remove",
                                                                 style: CustomTextStyles
                                                                     .labelLargeBold
                                                                     .copyWith(
                                                                         decoration:
-                                                                            TextDecoration
-                                                                                .underline)),
+                                                                            TextDecoration.underline)),
                                                           )
                                                         ])),
                                               )
@@ -347,7 +350,6 @@ class MetaView extends StatelessWidget {
   }
 
   /// Section Widget
-
 
   /// Navigates to the advDetailsOneScreen when the action is triggered.
   onTapImgImage(BuildContext context) {
